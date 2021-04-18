@@ -3,7 +3,7 @@ import { useAppDispatch, useAppSelector } from 'setup/hooks';
 import { decrement, increment } from 'logic/counter/counter.slice';
 import { Button } from 'components/atoms';
 
-export function Counter() {
+export const Counter: React.FC = () => {
   const count = useAppSelector((state) => state.counter.value)
   const dispatch = useAppDispatch()
 

@@ -6,13 +6,17 @@ interface IProps {
   onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
-export const Button = (props: IProps) => {
+export const Button: React.FC<IProps> = ({
+  label,
+  text,
+  onClick
+}) => {
   return (
     <button
-      aria-label={props.label}
-      onClick={props.onClick}
+      aria-label={label}
+      onClick={onClick}
     >
-      {props.text}
+      {text}
     </button>
   );
 };
